@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario</title>
+</head>
+<body>
+<h1>Formulario de Tarea</h1>
+<form action="" method="post">
+    <label for="user">Usuario:</label>
+    <input type="text" id="user" name="user" required><br><br>
+
+    <label for="task">Tarea:</label>
+    <input type="text" id="task" name="task" required><br><br>
+
+    <label for="end_date">Fecha de Finalización (Y-m-d):</label>
+    <input type="date" id="end_date" name="end_date" min="<?php echo date('Y-m-d'); ?>" required><br><br>
+        <input type="submit" value="Enviar">
+</form>
+</body>
+</html>
