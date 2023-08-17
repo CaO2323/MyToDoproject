@@ -1,5 +1,6 @@
 <?php
 
+
 class ToDoController extends Controller
 {
 
@@ -12,8 +13,11 @@ public function createAction()
     }
 }
 
-
-
+public function showTasksAction()
+{
+    $tasksList = new ToDoModel();
+    $this->view->content =  $tasksList->getTasks();
+}
 
 
 

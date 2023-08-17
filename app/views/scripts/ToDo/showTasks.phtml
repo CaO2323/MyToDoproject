@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tabla de Datos</title>
+</head>
+<body>
+<h1>Datos de Tareas</h1>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Usuario</th>
+            <th>Tarea</th>
+            <th>Estado</th>
+            <th>Fecha de Inicio</th>
+            <th>Fecha de Finalización</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php   foreach($this->content as $task): ?>
+        <tr>
+            <td><?php echo $task["user"];?></td>
+            <td><?php echo $task["task"];?></td>
+            <td><?php echo $task["status"];?></td>
+            <td><?php echo $task["startDate"];?></td>
+            <td><?php echo $task["end_date"];?></td>
+        </tr>
+        <?php endforeach; ?>
+    </tbody>
+    
+</table>
+</body>
+</html>

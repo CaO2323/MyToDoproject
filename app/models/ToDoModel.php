@@ -30,6 +30,10 @@ function addJson($task)
         file_put_contents(ROOT_PATH.'/app/models/data/data.json', json_encode($task, JSON_PRETTY_PRINT));
     }
 }
+function getTasks()
+{
+    return $this->readJson();
+}
 
 }
 
