@@ -9,7 +9,7 @@ public function readJson()
     $this->tasks = json_decode($this->jsonFile, true);
     return $this->tasks;
 }
-function crearTask($user, $task, $endDate)
+function createTask($user, $task, $endDate)
 {
     $id = count($this-> readJson()) + 1;
     $data = [
@@ -18,7 +18,7 @@ function crearTask($user, $task, $endDate)
         'task' => $task,
         'status' => 'pending',
         'startDate' => date('Y-m-d'),
-        'endDate' => $endDate
+        'end_date' => $endDate
     ];
     $this->tasks[] = $data;
     $this-> addJson($this->tasks);
