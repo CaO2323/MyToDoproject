@@ -1,5 +1,5 @@
 <?php
-class ToDoModel extends Model
+class ToDoModel 
 {
     private $jsonFile;
     private $tasks;
@@ -27,7 +27,7 @@ function createTask($user, $task, $endDate)
 function addJson($task)
 {
     if(!empty($task)){
-        file_put_contents($this->jsonFile, json_encode($task, JSON_PRETTY_PRINT));
+        file_put_contents(ROOT_PATH.'/app/models/data/data.json', json_encode($task, JSON_PRETTY_PRINT));
     }
 }
 
